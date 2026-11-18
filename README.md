@@ -67,6 +67,20 @@ Full output: [`results/results.md`](05_genai_exposure_gender/results/results.md)
 
 ---
 
+## 06 · Generative AI exposure by education and age
+`06_genai_exposure_education_age/` · Data: ILO–NASK 2025 × ESS Round 11, 23,495 workers · Method: weighted descriptive + bootstrap
+
+![GenAI exposure by education](06_genai_exposure_education_age/figures/genai_exposure_education.png)
+
+**Findings**
+- Exposure rises with education: 18% of workers with lower secondary education or less are in exposed occupations, vs 40% of university graduates.
+- The highest exposure is among women with upper secondary or vocational education (9.0% vs 2.7% of comparable men).
+- Ages 18–24: about 1 in 9 working women vs 1 in 85 men are in the most exposed jobs (small sample; indicative).
+
+Full output: [`results/results.md`](06_genai_exposure_education_age/results/results.md). Methodology: [`METHODOLOGY.md`](06_genai_exposure_education_age/METHODOLOGY.md).
+
+---
+
 ## 04 · Appendix: how much does income explain?
 `04_income_benchmark/` · Data: Eurostat, 2025 · Method: OLS regression
 
@@ -92,6 +106,7 @@ python 02_ess_microdata/analysis.py     # needs ESS11e04_2.csv in 02_ess_microda
 python 03_welfare_regimes/analysis.py   # uses the same ESS file
 python 04_income_benchmark/analysis.py
 python 05_genai_exposure_gender/analysis.py
+python 06_genai_exposure_education_age/analysis.py
 ```
 
 ## Data sources
