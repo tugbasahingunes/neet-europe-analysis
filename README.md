@@ -53,8 +53,6 @@ Full output: [`results/results.md`](03_welfare_regimes/results/results.md).
 
 ---
 
----
-
 ## 04 · Appendix: how much does income explain?
 `04_income_benchmark/` · Data: Eurostat, 2025 · Method: OLS regression
 
