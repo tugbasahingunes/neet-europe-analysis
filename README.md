@@ -9,17 +9,17 @@ Author: **Tuğba G.**, Family and Social Services Expert · Data & AI for Social
 ---
 
 ## 01 · Country level: how much does income explain?
-`01_country_level/` · Data: Eurostat, 2024 · Method: OLS regression
+`01_country_level/` · Data: Eurostat, 2025 · Method: OLS regression
 
 ![NEET and income](01_country_level/figures/neet_income_turkiye.png)
 
 **Findings**
-- Across 33 European countries, GDP per capita (PPS, log) explains about half of the variation in NEET rates among 15–29-year-olds (R² = 0.49).
-- Based on its income level, Türkiye's expected NEET rate is about 13%; the actual rate is 26%.
-- The excess is concentrated among young women (36% actual vs 15% expected); for young men the gap is small (16% vs 12%).
+- Across 33 European countries, GDP per capita (PPS, log) explains about half of the variation in NEET rates among 15–29-year-olds (R² = 0.51).
+- Based on its income level, Türkiye's expected NEET rate is about 13%; the actual rate is 26% (2025).
+- The excess is concentrated among young women (37% actual vs 15% expected); for young men the gap is small (16% vs 12%).
 
 **Robustness:** A multivariate model adding early school leaving and social protection spending was also estimated.
-Türkiye is a highly influential observation (Cook's D ≈ 1), and those additional effects are not robust to excluding it,
+Türkiye is a highly influential observation (Cook's D = 1.37), and those additional effects are not robust to excluding it,
 so only the income relationship is used for the headline. Full output: [`results/regression_results.md`](01_country_level/results/regression_results.md).
 
 ---

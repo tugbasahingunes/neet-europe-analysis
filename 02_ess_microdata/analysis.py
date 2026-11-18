@@ -105,27 +105,28 @@ md = ["# Results: ESS Round 11 NEET model\n",
 S, T1, T2 = "#fcfcfb", "#0b0b0b", "#52514e"
 BLUE, ORANGE, GRID = "#2a78d6", "#eb6834", "#e6e5e0"
 plt.rcParams.update({"font.family": "DejaVu Sans", "text.color": T1})
-fig = plt.figure(figsize=(10, 10), dpi=130, facecolor=S)
-fig.text(0.06, 0.93, "It's not being a young woman.", fontsize=20, weight="bold")
-fig.text(0.06, 0.89, "It's being a young mother.", fontsize=20, weight="bold", color=ORANGE)
-fig.text(0.06, 0.845, f"Predicted probability of being NEET, ages 15–29, {y.cntry.nunique()} European countries",
+fig = plt.figure(figsize=(10, 12.5), dpi=130, facecolor=S)
+fig.text(0.06, 0.955, "YOUTH NEET IN EUROPE · INDIVIDUAL DATA", fontsize=11.5, color=ORANGE, weight="bold")
+fig.text(0.06, 0.935, "It's not being a young woman.", fontsize=24, weight="bold", va="top")
+fig.text(0.06, 0.895, "It's being a young mother.", fontsize=24, weight="bold", color=ORANGE, va="top")
+fig.text(0.06, 0.835, f"Predicted probability of being NEET, ages 15–29, {y.cntry.nunique()} European countries",
          fontsize=12, color=T2)
-ax = fig.add_axes([0.30, 0.30, 0.62, 0.48], facecolor=S)
+ax = fig.add_axes([0.30, 0.33, 0.62, 0.45], facecolor=S)
 labels = ["Young men,\nno child at home", "Young fathers", "Young women,\nno child at home", "Young mothers"]
 for i, (lab, v) in enumerate(zip(labels, pp.values())):
     yy = len(labels) - 1 - i
     ax.barh(yy, v * 100, height=0.55, color=ORANGE if i == 3 else BLUE)
-    ax.text(v * 100 + 1, yy, f"{v*100:.0f}%", va="center", fontsize=15, weight="bold")
+    ax.text(v * 100 + 1, yy, f"{v*100:.0f}%", va="center", fontsize=18, weight="bold")
 ax.set_yticks(range(len(labels))); ax.set_yticklabels(labels[::-1], fontsize=12.5, color=T1)
 ax.set_xlim(0, 60); ax.set_xticks([0, 20, 40, 60])
 ax.set_xticklabels(["0%", "20%", "40%", "60%"], color=T2)
 ax.grid(axis="x", color=GRID); ax.set_axisbelow(True); ax.tick_params(length=0)
 for s in ax.spines.values(): s.set_visible(False)
-fig.text(0.06, 0.20, f"Among NEET young mothers, {care_share:.0%} report their main activity as\n"
-         "housework or looking after children.", fontsize=12.5, linespacing=1.5)
-fig.text(0.06, 0.06, f"Weighted logistic regression, n = {len(y):,}. Controls: age, own education, parental education, partner in\n"
+fig.text(0.06, 0.235, f"{care_share:.0%}", fontsize=40, weight="bold", color=ORANGE, va="center")
+fig.text(0.25, 0.235, "of NEET young mothers say their main activity\nis housework or looking after children", fontsize=14, va="center", linespacing=1.4)
+fig.text(0.06, 0.04, f"Weighted logistic regression, n = {len(y):,}. Controls: age, own education, parental education, partner in\n"
          "household, born abroad, country fixed effects; SEs clustered by country.\n"
-         "Source: European Social Survey Round 11 (2023–24). Analysis: Tuğba G.",
+         "Source: European Social Survey Round 11 (2023–24).\nAnalysis: Tuğba G. · github.com/tugbasahingunes/neet-europe-analysis",
          fontsize=9.5, color=T2, linespacing=1.5)
 fig.savefig(FIG / "neet_young_mothers.png", facecolor=S)
 print("Done. See figures/ and results/.")
