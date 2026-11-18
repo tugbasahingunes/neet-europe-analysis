@@ -8,19 +8,18 @@ Author: **Tuğba G.**, Family and Social Services Expert · Data & AI for Social
 
 ---
 
-## 01 · Country level: how much does income explain?
-`01_country_level/` · Data: Eurostat, 2025 · Method: OLS regression
+## 01 · When does the gender gap open up?
+`01_age_gender_gap/` · Data: Eurostat EU-LFS, 2025, 34 countries · Method: descriptive
 
-![NEET and income](01_country_level/figures/neet_income_turkiye.png)
+![NEET gender gap by age](01_age_gender_gap/figures/neet_gender_gap_by_age.png)
 
 **Findings**
-- Across 33 European countries, GDP per capita (PPS, log) explains about half of the variation in NEET rates among 15–29-year-olds (R² = 0.51).
-- Based on its income level, Türkiye's expected NEET rate is about 13%; the actual rate is 26% (2025).
-- The excess is concentrated among young women (37% actual vs 15% expected); for young men the gap is small (16% vs 12%).
+- At ages 15–24, young women and men in the EU are equally likely to be NEET (9.1% vs 9.0%).
+- At 25–29, a gap opens: 17.8% of women vs 11.9% of men.
+- The gap widens with age in 32 of 34 countries.
+- Türkiye has the largest gap: +14 points at 15–24 and +31 points at 25–29 (47% of women aged 25–29 are NEET).
 
-**Robustness:** A multivariate model adding early school leaving and social protection spending was also estimated.
-Türkiye is a highly influential observation (Cook's D = 1.37), and those additional effects are not robust to excluding it,
-so only the income relationship is used for the headline. Full output: [`results/regression_results.md`](01_country_level/results/regression_results.md).
+Full table: [`results/summary.md`](01_age_gender_gap/results/summary.md).
 
 ---
 
@@ -54,17 +53,36 @@ Full output: [`results/results.md`](03_welfare_regimes/results/results.md).
 
 ---
 
+---
+
+## 04 · Appendix: how much does income explain?
+`04_income_benchmark/` · Data: Eurostat, 2025 · Method: OLS regression
+
+![NEET and income](04_income_benchmark/figures/neet_income_turkiye.png)
+
+**Findings**
+- Across 33 European countries, GDP per capita (PPS, log) explains about half of the variation in NEET rates among 15–29-year-olds (R² = 0.51).
+- Based on its income level, Türkiye's expected NEET rate is about 13%; the actual rate is 26% (2025).
+- The excess is concentrated among young women (37% actual vs 15% expected); for young men the gap is small (16% vs 12%).
+
+**Robustness:** A multivariate model adding early school leaving and social protection spending was also estimated.
+Türkiye is a highly influential observation (Cook's D = 1.37), and those additional effects are not robust to excluding it,
+so only the income relationship is used for the headline. Full output: [`results/regression_results.md`](04_income_benchmark/results/regression_results.md).
+
+---
+
 ## Reproduce
 
 ```bash
 pip install -r requirements.txt
-python 01_country_level/analysis.py     # downloads Eurostat data if not cached
+python 01_age_gender_gap/analysis.py    # downloads Eurostat data if not cached
 python 02_ess_microdata/analysis.py     # needs ESS11e04_2.csv in 02_ess_microdata/data/
 python 03_welfare_regimes/analysis.py   # uses the same ESS file
+python 04_income_benchmark/analysis.py
 ```
 
 ## Data sources
-- Eurostat: `edat_lfse_20`, `tec00114`, `edat_lfse_14`, `tps00098`, `educ_uoe_fine06`. Reuse permitted with attribution (© European Union).
+- Eurostat (2025 release): `edat_lfse_20`, `tec00114`, `edat_lfse_14`, `tps00098`, `educ_uoe_fine06`. Reuse permitted with attribution (© European Union).
 - European Social Survey ERIC (2025). ESS Round 11 – integrated file, edition 4.2. Sikt. Not redistributed here.
 
 Views are my own and do not represent any institution.
