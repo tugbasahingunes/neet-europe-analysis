@@ -40,12 +40,27 @@ Full output: [`results/regression_results.md`](02_ess_microdata/results/regressi
 
 ---
 
+## 03 · Welfare regimes: does the motherhood gap differ?
+`03_welfare_regimes/` · Data: ESS Round 11, women aged 15–29, 26 countries in five regimes · Method: logistic regression per regime + bootstrap
+
+![Motherhood gap by welfare regime](03_welfare_regimes/figures/neet_motherhood_by_regime.png)
+
+**Findings**
+- The motherhood gap in NEET is large and positive in every welfare regime: from +20 points (Liberal) to +43 points (Continental).
+- Even in the Nordic countries, young mothers are about 5× as likely to be NEET as other young women (36% vs 8%).
+- Differences between regimes are **not** statistically significant (LR test, p = 0.08); small numbers of young mothers in some regimes make intervals wide.
+
+Full output: [`results/results.md`](03_welfare_regimes/results/results.md).
+
+---
+
 ## Reproduce
 
 ```bash
 pip install -r requirements.txt
 python 01_country_level/analysis.py     # downloads Eurostat data if not cached
 python 02_ess_microdata/analysis.py     # needs ESS11e04_2.csv in 02_ess_microdata/data/
+python 03_welfare_regimes/analysis.py   # uses the same ESS file
 ```
 
 ## Data sources
