@@ -19,7 +19,7 @@ Author: **Tuğba G.**, Family and Social Services Expert · Data & AI for Social
 - The gap widens with age in 32 of 34 countries.
 - Türkiye has the largest gap: +14 points at 15–24 and +31 points at 25–29 (47% of women aged 25–29 are NEET).
 
-Full table: [`results/summary.md`](01_age_gender_gap/results/summary.md).
+Full table: [`results/summary.md`](01_age_gender_gap/results/summary.md). Methodology: [`METHODOLOGY.md`](01_age_gender_gap/METHODOLOGY.md).
 
 ---
 
@@ -35,7 +35,7 @@ Full table: [`results/summary.md`](01_age_gender_gap/results/summary.md).
 - Among NEET young mothers, 78% report housework or childcare as their main activity.
 
 **Caveats:** cross-sectional data, so associations rather than causal effects. "Child at home" is derived from the household grid. The number of young fathers in the sample is small (n = 215).
-Full output: [`results/regression_results.md`](02_ess_microdata/results/regression_results.md).
+Full output: [`results/regression_results.md`](02_ess_microdata/results/regression_results.md). Methodology: [`METHODOLOGY.md`](02_ess_microdata/METHODOLOGY.md).
 
 ---
 
@@ -49,7 +49,7 @@ Full output: [`results/regression_results.md`](02_ess_microdata/results/regressi
 - Even in the Nordic countries, young mothers are about 5× as likely to be NEET as other young women (36% vs 8%).
 - Differences between regimes are **not** statistically significant (LR test, p = 0.08); small numbers of young mothers in some regimes make intervals wide.
 
-Full output: [`results/results.md`](03_welfare_regimes/results/results.md).
+Full output: [`results/results.md`](03_welfare_regimes/results/results.md). Methodology: [`METHODOLOGY.md`](03_welfare_regimes/METHODOLOGY.md).
 
 ---
 
@@ -65,7 +65,7 @@ Full output: [`results/results.md`](03_welfare_regimes/results/results.md).
 
 **Robustness:** A multivariate model adding early school leaving and social protection spending was also estimated.
 Türkiye is a highly influential observation (Cook's D = 1.37), and those additional effects are not robust to excluding it,
-so only the income relationship is used for the headline. Full output: [`results/regression_results.md`](04_income_benchmark/results/regression_results.md).
+so only the income relationship is used for the headline. Full output: [`results/regression_results.md`](04_income_benchmark/results/regression_results.md). Methodology: [`METHODOLOGY.md`](04_income_benchmark/METHODOLOGY.md).
 
 ---
 
