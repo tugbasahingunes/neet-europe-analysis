@@ -1,7 +1,6 @@
-# Youth NEET in Europe: what the data says
+# Data & AI for social policy: Europe
 
-Short, reproducible analyses of young people **not in employment, education or training (NEET)**
-using open international data. Each folder is one analysis, with code, results and the figure
+Short, reproducible analyses of youth, gender, work and AI using open international data. Each folder is one analysis, with code, results and the figure
 shared on LinkedIn.
 
 Author: **Tuğba G.**, Family and Social Services Expert · Data & AI for Social Policy
@@ -53,6 +52,21 @@ Full output: [`results/results.md`](03_welfare_regimes/results/results.md). Meth
 
 ---
 
+## 05 · Generative AI exposure through a gender lens
+`05_genai_exposure_gender/` · Data: ILO–NASK GenAI exposure index 2025 × ESS Round 11, 23,577 workers in 30 countries · Method: weighted descriptive
+
+![GenAI exposure by gender](05_genai_exposure_gender/figures/genai_exposure_gender.png)
+
+**Findings**
+- Women are 71% of workers in the occupations most exposed to generative AI (ILO Gradient 4), vs 48% of all workers.
+- 7.2% of working women vs 2.8% of working men are in these jobs; among 18–29-year-olds the gap is about 4×.
+- The most exposed large occupations are clerical jobs held mostly by women.
+- Exposure means technical potential, not job loss.
+
+Full output: [`results/results.md`](05_genai_exposure_gender/results/results.md). Methodology: [`METHODOLOGY.md`](05_genai_exposure_gender/METHODOLOGY.md).
+
+---
+
 ## 04 · Appendix: how much does income explain?
 `04_income_benchmark/` · Data: Eurostat, 2025 · Method: OLS regression
 
@@ -77,10 +91,12 @@ python 01_age_gender_gap/analysis.py    # downloads Eurostat data if not cached
 python 02_ess_microdata/analysis.py     # needs ESS11e04_2.csv in 02_ess_microdata/data/
 python 03_welfare_regimes/analysis.py   # uses the same ESS file
 python 04_income_benchmark/analysis.py
+python 05_genai_exposure_gender/analysis.py
 ```
 
 ## Data sources
 - Eurostat (2025 release): `edat_lfse_20`, `tec00114`, `edat_lfse_14`, `tps00098`, `educ_uoe_fine06`. Reuse permitted with attribution (© European Union).
+- ILO–NASK (2025). Generative AI and Jobs: A Refined Global Index of Occupational Exposure. ILO Working Paper 140. CC BY 4.0.
 - European Social Survey ERIC (2025). ESS Round 11 – integrated file, edition 4.2. Sikt. Not redistributed here.
 
 Views are my own and do not represent any institution.
