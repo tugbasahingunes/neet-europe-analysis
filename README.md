@@ -52,6 +52,21 @@ Full output: [`results/results.md`](03_welfare_regimes/results/results.md). Meth
 
 ---
 
+## 07 · Decomposing the gender gap in youth NEET
+`07_gender_gap_decomposition/` · Data: ESS Round 11, 7,313 young people, 30 countries · Method: Oaxaca–Blinder decomposition (pooled reference), cluster bootstrap over countries
+
+![Gender gap decomposition](07_gender_gap_decomposition/figures/gender_gap_decomposition.png)
+
+**Findings**
+- The NEET gap between young women and men is 5.6 points (15.7% vs 10.1%).
+- Differences in characteristics explain only about a fifth of it. Young women's higher education *narrows* the gap; more of them living with a child *widens* it.
+- Most of the gap comes from the same situation having different consequences: living with a child raises the NEET probability by 41 points for young women and by 3 points for young men.
+- Robust in direction to the choice of reference coefficients.
+
+Full output: [`results/results.md`](07_gender_gap_decomposition/results/results.md). Methodology: [`METHODOLOGY.md`](07_gender_gap_decomposition/METHODOLOGY.md).
+
+---
+
 ## 05 · Generative AI exposure through a gender lens
 `05_genai_exposure_gender/` · Data: ILO–NASK GenAI exposure index 2025 × ESS Round 11, 23,577 workers in 30 countries · Method: weighted descriptive
 
@@ -107,6 +122,7 @@ python 03_welfare_regimes/analysis.py   # uses the same ESS file
 python 04_income_benchmark/analysis.py
 python 05_genai_exposure_gender/analysis.py
 python 06_genai_exposure_education_age/analysis.py
+python 07_gender_gap_decomposition/analysis.py
 ```
 
 ## Data sources
