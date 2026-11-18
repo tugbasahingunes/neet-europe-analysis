@@ -96,6 +96,21 @@ Full output: [`results/results.md`](06_genai_exposure_education_age/results/resu
 
 ---
 
+## 08 · Will generative AI help or replace? Augmentation vs automation by gender
+`08_genai_augmentation_automation/` · Data: ILO GenAI potential classification × ESS Round 11, 21,157 workers · Method: weighted logistic regression + Oaxaca–Blinder decomposition
+
+![Augmentation vs automation](08_genai_augmentation_automation/figures/genai_augmentation_automation.png)
+
+**Findings**
+- Similar shares of women and men work in jobs where generative AI is expected mainly to support the work (16.5% vs 14.7%).
+- Women are 2.5× as likely to work in jobs where AI could take over many tasks (6.8% vs 2.8%).
+- With the same age, education, industry, hours, sector and country, the gap remains (7.3% vs 2.6%; odds ratio 3.1).
+- Industry, education and hours do not explain the gap; it comes from different jobs within the same industries.
+
+Full output: [`results/results.md`](08_genai_augmentation_automation/results/results.md). Methodology: [`METHODOLOGY.md`](08_genai_augmentation_automation/METHODOLOGY.md).
+
+---
+
 ## 04 · Appendix: how much does income explain?
 `04_income_benchmark/` · Data: Eurostat, 2025 · Method: OLS regression
 
@@ -123,6 +138,7 @@ python 04_income_benchmark/analysis.py
 python 05_genai_exposure_gender/analysis.py
 python 06_genai_exposure_education_age/analysis.py
 python 07_gender_gap_decomposition/analysis.py
+python 08_genai_augmentation_automation/analysis.py
 ```
 
 ## Data sources
