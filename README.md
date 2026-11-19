@@ -125,6 +125,21 @@ Full output: [`results/results.md`](08_genai_augmentation_automation/results/res
 
 ---
 
+## 10 · What makes Europeans happy?
+`10_what_makes_europeans_happy/` · Data: ESS Round 11, 46,006 adults, 30 countries · Methods: multiple imputation, OLS with Rubin's rules, dominance analysis, splines, LightGBM + SHAP, multilevel model
+
+![What makes Europeans happy](10_what_makes_europeans_happy/figures/what_makes_europeans_happy.png)
+
+**Findings**
+- Social relationships and health each account for about a quarter of the explained differences in happiness; money for about a fifth.
+- What matters is feeling financially secure, not the income level itself: once that feeling is accounted for, income decile adds almost nothing.
+- Holding other factors equal, happiness follows a shallow U-shape with age, lowest around 37.
+- Results agree across OLS, dominance analysis, gradient boosting with SHAP and a multilevel model.
+
+Full output: [`results/results.md`](10_what_makes_europeans_happy/results/results.md). Methodology: [`METHODOLOGY.md`](10_what_makes_europeans_happy/METHODOLOGY.md).
+
+---
+
 ## 04 · Appendix: how much does income explain?
 `04_income_benchmark/` · Data: Eurostat, 2025 · Method: OLS regression
 
@@ -154,6 +169,7 @@ python 06_genai_exposure_education_age/analysis.py
 python 07_gender_gap_decomposition/analysis.py
 python 08_genai_augmentation_automation/analysis.py
 python 09_ml_neet_explainable/analysis.py
+python 10_what_makes_europeans_happy/analysis.py
 ```
 
 ## Data sources
