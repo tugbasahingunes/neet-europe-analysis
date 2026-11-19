@@ -67,6 +67,20 @@ Full output: [`results/results.md`](07_gender_gap_decomposition/results/results.
 
 ---
 
+## 09 · Machine learning for youth NEET: accuracy, explainability, fairness
+`09_ml_neet_explainable/` · Data: ESS Round 11, 7,313 young people · Methods: logistic regression vs LightGBM, repeated cross-validation, SHAP, fairness audit
+
+![ML fairness](09_ml_neet_explainable/figures/ml_neet_fairness.png)
+
+**Findings**
+- Gradient boosting does not beat logistic regression (AUC 0.73 vs 0.73); the simpler, transparent model is as good.
+- SHAP: country, age, household size and living with a child drive predictions most; a child at home raises predicted risk almost twice as much for young women as for young men.
+- Fairness: if the top 20% of risk scores were contacted, the tool would reach 57% of NEET young women but only 19% of NEET young men, and only about a fifth of NEET young people in Nordic countries.
+
+Full output: [`results/results.md`](09_ml_neet_explainable/results/results.md). Methodology: [`METHODOLOGY.md`](09_ml_neet_explainable/METHODOLOGY.md).
+
+---
+
 ## 05 · Generative AI exposure through a gender lens
 `05_genai_exposure_gender/` · Data: ILO–NASK GenAI exposure index 2025 × ESS Round 11, 23,577 workers in 30 countries · Method: weighted descriptive
 
@@ -139,6 +153,7 @@ python 05_genai_exposure_gender/analysis.py
 python 06_genai_exposure_education_age/analysis.py
 python 07_gender_gap_decomposition/analysis.py
 python 08_genai_augmentation_automation/analysis.py
+python 09_ml_neet_explainable/analysis.py
 ```
 
 ## Data sources
