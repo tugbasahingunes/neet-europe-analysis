@@ -177,7 +177,7 @@ ax2.set_yticks([1, 0]); ax2.set_yticklabels(["Young women", "Young men"], fontsi
 ax2.set_xlim(-4, 62); ax2.set_xticks([]); ax2.tick_params(length=0); ax2.axvline(0, color=GREY, lw=1)
 for s in ax2.spines.values(): s.set_visible(False)
 fig.text(0.06, 0.165, "Black lines: 95% confidence intervals.", fontsize=9.5, color=T3)
-fig.text(0.06, 0.125, "The gap is less about who young women are, and more about how much\nparenthood changes their paths compared with young men's.",
+fig.text(0.06, 0.125, "The gap is not about young women themselves. It reflects how well young\nparents, especially mothers, are supported to combine family, education and work.",
          fontsize=13, weight="bold", linespacing=1.4, va="center")
 fig.text(0.06, 0.03,
          f"Two-fold Oaxaca–Blinder decomposition, weighted linear probability model, pooled reference coefficients (Neumark/Jann);\n"

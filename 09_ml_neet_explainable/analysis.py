@@ -191,8 +191,8 @@ for i, (k, v) in enumerate(top.items()):
 ax2.set_yticks(range(len(top))); ax2.set_yticklabels([LABELS[k] for k in top.index], fontsize=11)
 ax2.set_xticks([]); ax2.tick_params(length=0)
 for s in ax2.spines.values(): s.set_visible(False)
-fig.text(0.06, 0.41, f"Mean absolute SHAP value (log-odds). Among those living with a child, the child raises predicted\n"
-         f"risk almost twice as much for young women ({child_eff[1]:.2f}) as for young men ({child_eff[0]:.2f}).",
+fig.text(0.06, 0.41, "Mean absolute SHAP value (log-odds). Family circumstances weigh more heavily in young women's\n"
+         "predicted risk, a sign that young parents, especially mothers, need better support to combine care and work.",
          fontsize=10, color=T2, va="top", linespacing=1.45)
 
 # panel 3: fairness
