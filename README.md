@@ -140,6 +140,21 @@ Full output: [`results/results.md`](10_what_makes_europeans_happy/results/result
 
 ---
 
+## 11 · Finland and generative AI
+`11_finland_genai/` · Data: Eurostat 2025 (GenAI use, digital skills, education) × ESS Round 11 × ILO · Methods: cross-country OLS with leave-one-out validation, bootstrap intervals
+
+![Finland and generative AI](11_finland_genai/figures/finland_genai.png)
+
+**Findings**
+- 46% of Finns used generative AI in 2025 (EU-27: 33%); among 45–54-year-olds, 52% vs 28%.
+- Finland has the smallest gap between young people and adults of 35 countries (9 vs 25 points in the EU).
+- Across countries, adult digital skills and university education explain about two thirds of the differences in adult GenAI use; Finland sits close to what its skills predict.
+- Fewer Finnish workers are in the jobs most exposed to generative AI (2.0% vs 5.0%).
+
+Full output: [`results/results.md`](11_finland_genai/results/results.md). Methodology: [`METHODOLOGY.md`](11_finland_genai/METHODOLOGY.md).
+
+---
+
 ## 04 · Appendix: how much does income explain?
 `04_income_benchmark/` · Data: Eurostat, 2025 · Method: OLS regression
 
@@ -170,11 +185,12 @@ python 07_gender_gap_decomposition/analysis.py
 python 08_genai_augmentation_automation/analysis.py
 python 09_ml_neet_explainable/analysis.py
 python 10_what_makes_europeans_happy/analysis.py
+python 11_finland_genai/analysis.py
 ```
 
 ## Data sources
 - Eurostat (2025 release): `edat_lfse_20`, `tec00114`, `edat_lfse_14`, `tps00098`, `educ_uoe_fine06`. Reuse permitted with attribution (© European Union).
 - ILO–NASK (2025). Generative AI and Jobs: A Refined Global Index of Occupational Exposure. ILO Working Paper 140. CC BY 4.0.
-- European Social Survey ERIC (2025). ESS Round 11 – integrated file, edition 4.2. Sikt. Not redistributed here.
+- European Social Survey ERIC (2025). ESS Round 11 – integrated file, edition 4.2. Sikt. CC BY-NC-SA 4.0; free download from the ESS Data Portal.
 
 Views are my own and do not represent any institution.
